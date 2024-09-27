@@ -1,10 +1,10 @@
 package com.example.wishiu;
 
 import android.database.Cursor;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,36 +30,40 @@ public class FragmentAchieved extends Fragment {
         produtosa.clear();
         produtosAa = new ProdutosAdaptera(getActivity(), produtosa);
         Cursor ppa = bd.getAchieved();
-        final RelativeLayout rlWishesa = (RelativeLayout) rootView.findViewById(R.id.rlAchieved);
-        rva = (RecyclerView) rootView.findViewById(R.id.rvA);
+        final RelativeLayout rlWishesa = rootView.findViewById(R.id.rlAchieved);
+        rva = rootView.findViewById(R.id.rvA);
 
-        if(ppa != null){
+        if (ppa != null) {
             ppa.moveToPosition(-1);
             while (ppa.moveToNext()) {
                 Cursor ppai = bd.getProdutoAchieved(ppa.getString(1));
                 String prcp = "null";
-                if(ppai != null && ppai.moveToFirst()){
+                if (ppai != null && ppai.moveToFirst()) {
                     String titp = capitalizeFirstLetter(ppai.getString(1));
                     String catp = capitalizeFirstLetter(ppai.getString(4));
                     byte[] imgp = ppai.getBlob(3);
                     produtosa.add(new ProdutosWishes(imgp, prcp, titp, catp, ppa.getInt(1)));
                     produtosAa.notifyDataSetChanged();
                 }
-                ppai.close();
+                if (ppai != null) {
+                    ppai.close();
+                }
             }
         }
-        ppa.close();
+        if (ppa != null) {
+            ppa.close();
+        }
 
         llma = new LinearLayoutManager(getActivity());
         rva.setLayoutManager(llma);
-        if(produtosa != null && produtosa.size() > 0){
+        if (produtosa != null && produtosa.size() > 0) {
             rva.setAdapter(produtosAa);
         } else {
             TextView emptyWishesa = new TextView(getActivity());
             emptyWishesa.setText("You haven't achieved any wishes yet. When you do, they will be added to this list.");
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
-            params.setMargins(24,0,24,0);
+            params.setMargins(24, 0, 24, 0);
             emptyWishesa.setLayoutParams(params);
             emptyWishesa.setGravity(Gravity.CENTER);
             rlWishesa.removeView(rva);
@@ -76,5 +80,5 @@ public class FragmentAchieved extends Fragment {
         }
         return original.substring(0, 1).toUpperCase() + original.substring(1);
     }
-
 }
+

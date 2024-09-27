@@ -1,10 +1,10 @@
 package com.example.wishiu;
 
 import android.database.Cursor;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,10 +31,10 @@ public class FragmentScheduled extends Fragment {
         produtossc.clear();
         produtosAsc = new ProdutosAdaptersc(getActivity(), produtossc);
         Cursor ppsc = bd.getScheduled();
-        final RelativeLayout rlWishessc = (RelativeLayout) rootView.findViewById(R.id.rlScheduled);
-        rvsc = (RecyclerView) rootView.findViewById(R.id.rvS);
+        final RelativeLayout rlWishessc = rootView.findViewById(R.id.rlScheduled);
+        rvsc = rootView.findViewById(R.id.rvS);
 
-        if(ppsc != null){
+        if (ppsc != null) {
             ppsc.moveToPosition(-1);
             while (ppsc.moveToNext()) {
                 Cursor ppsci = bd.getProdutoAchieved(ppsc.getString(1));
@@ -44,7 +44,7 @@ public class FragmentScheduled extends Fragment {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                if(ppsci != null && ppsci.moveToFirst()){
+                if (ppsci != null && ppsci.moveToFirst()) {
                     String titp = capitalizeFirstLetter(ppsci.getString(1));
                     String catp = capitalizeFirstLetter(ppsci.getString(4));
                     byte[] imgp = ppsci.getBlob(3);
@@ -58,14 +58,14 @@ public class FragmentScheduled extends Fragment {
 
         llmsc = new LinearLayoutManager(getActivity());
         rvsc.setLayoutManager(llmsc);
-        if(produtossc != null && produtossc.size() > 0){
+        if (produtossc != null && produtossc.size() > 0) {
             rvsc.setAdapter(produtosAsc);
         } else {
             TextView emptyWishessc = new TextView(getActivity());
             emptyWishessc.setText("You haven't set arrival dates for any of your achieved wishes. When you do, they will be added to this list.");
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
-            params.setMargins(24,0,24,0);
+            params.setMargins(24, 0, 24, 0);
             emptyWishessc.setLayoutParams(params);
             emptyWishessc.setGravity(Gravity.CENTER);
             rlWishessc.removeView(rvsc);
@@ -82,5 +82,4 @@ public class FragmentScheduled extends Fragment {
         }
         return original.substring(0, 1).toUpperCase() + original.substring(1);
     }
-
 }

@@ -1,15 +1,16 @@
 package com.example.wishiu;
 
 import android.content.Intent;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.support.v7.widget.PopupMenu;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
+import androidx.viewpager.widget.ViewPager;
 
 public class PrincipalActivity extends AppCompatActivity {
 
