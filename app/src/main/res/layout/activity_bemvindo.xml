@@ -7,7 +7,7 @@
     android:background="@drawable/gradiente"
     tools:context=".BemvindoActivity">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -20,25 +20,19 @@
             android:layout_height="33dp"
             android:layout_gravity="center"
             android:layout_marginStart="6dp"
-            android:layout_marginLeft="6dp"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginRight="6dp"
             android:contentDescription="@string/app_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/wishiu" />
+            android:src="@drawable/wishiu"
+            android:layout_marginLeft="6dp" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginLeft="6dp"
             android:layout_marginTop="50dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginRight="6dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +50,7 @@
                     android:layout_height="143dp"
                     android:layout_gravity="center"
                     android:contentDescription="@string/app_name"
-                    app:srcCompat="@drawable/icon" />
+                    android:src="@drawable/icon" />
             </LinearLayout>
 
         </LinearLayout>
@@ -64,11 +58,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginLeft="6dp"
             android:layout_marginTop="42dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginRight="6dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -95,9 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
-            android:layout_marginLeft="6dp"
             android:layout_marginEnd="6dp"
-            android:layout_marginRight="6dp"
             android:layout_marginBottom="82dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -111,12 +99,11 @@
                 android:layout_marginRight="64dp"
                 android:orientation="horizontal">
 
-
                 <EditText
                     android:id="@+id/nomeInput"
                     android:layout_width="wrap_content"
                     android:maxLength="25"
-                    android:layout_height="40dp"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
                     android:background="@drawable/inputs"
                     android:hint="@string/nome"
@@ -125,17 +112,15 @@
                     android:textColor="#707070"
                     android:textColorHint="#707070"
                     android:textSize="15sp" />
-
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
+                android:layout_height="48dp"
                 android:layout_marginLeft="64dp"
                 android:layout_marginTop="26dp"
                 android:layout_marginRight="64dp"
                 android:orientation="horizontal">
-
 
                 <Button
                     android:id="@+id/continuarButton"
@@ -148,11 +133,9 @@
                     android:textColor="#FFF"
                     android:textSize="16sp"
                     android:textStyle="bold" />
-
             </LinearLayout>
         </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
