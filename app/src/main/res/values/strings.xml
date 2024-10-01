@@ -34,4 +34,9 @@
     <string name="pergunta3">Укажите ожидаемую дату прибытия вашего продукта:</string>
     <string name="back_button_description">Назад</string>
     <string name="delete_button_description">Удалить</string>
+    <string name="go_back">Назад</string>
+    <string name="add_button">Добавить</string>
+    <string name="settings_button">Настройки</string>
+    <string name="viewpager_description">Проведите влево или вправо, чтобы переключаться между экранами</string>
+
 </resources>
