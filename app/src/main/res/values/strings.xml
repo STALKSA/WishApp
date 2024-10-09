@@ -38,5 +38,8 @@
     <string name="add_button">Добавить</string>
     <string name="settings_button">Настройки</string>
     <string name="viewpager_description">Проведите влево или вправо, чтобы переключаться между экранами</string>
+    <string name="title">Title</string>
+    <string name="price">Price</string>
+    <string name="starting_price">Starting Price</string>
 
 </resources>

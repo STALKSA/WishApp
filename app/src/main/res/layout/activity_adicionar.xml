@@ -8,7 +8,7 @@
     android:background="@drawable/gradiente_dois"
     tools:context=".AdicionarActivity">
 
-    <!-- Заменяем android.support.design.widget.CoordinatorLayout на androidx.coordinatorlayout.widget.CoordinatorLayout -->
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -40,7 +40,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <!-- Заменяем android.support.v7.widget.CardView на androidx.cardview.widget.CardView -->
+
                         <androidx.cardview.widget.CardView
                             android:id="@+id/containerImagem"
                             android:layout_width="match_parent"
@@ -97,8 +97,12 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/categoryInput"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:orientation="vertical">
 
                             <EditText
                                 android:id="@+id/categoryInput"
@@ -109,6 +113,49 @@
                                 android:background="@drawable/inputs"
                                 android:hint="@string/category"
                                 android:inputType="textPersonName"
+                                android:padding="10dp"
+                                android:textColor="#707070"
+                                android:textColorHint="#707070"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/tituloInput"
+                                android:maxLength="18"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:minWidth="48dp"
+                                android:background="@drawable/inputs"
+                                android:hint="@string/title"
+                                android:inputType="textPersonName"
+                                android:padding="10dp"
+                                android:textColor="#707070"
+                                android:textColorHint="#707070"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/priceInput"
+                                android:maxLength="10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/inputs"
+                                android:hint="@string/price"
+                                android:inputType="numberDecimal"
+                                android:padding="10dp"
+                                android:textColor="#707070"
+                                android:textColorHint="#707070"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/startingvInput"
+                                android:maxLength="10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/inputs"
+                                android:hint="@string/starting_price"
+                                android:inputType="numberDecimal"
                                 android:padding="10dp"
                                 android:textColor="#707070"
                                 android:textColorHint="#707070"
