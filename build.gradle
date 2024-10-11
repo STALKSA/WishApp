@@ -6,7 +6,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2' // Обновите версию плагина
+        classpath 'com.android.tools.build:gradle:8.1.0'
     }
 }
 

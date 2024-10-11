@@ -25,7 +25,7 @@ public class BemvindoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String valorInput = nomeInput.getText().toString().trim();
                 if (valorInput.isEmpty()) {
-                    abrirAlerta("Please, insert your name.");
+                    abrirAlerta("Пожалуйста, введите свое имя.");
                 } else {
                     inserirName(valorInput);
                 }
@@ -48,7 +48,7 @@ public class BemvindoActivity extends AppCompatActivity {
             startActivity(principal);
             finish();
         } else {
-            abrirAlerta("An error occurred. Please, try again.");
+            abrirAlerta("Возникла ошибка. Попробуйте еще раз.");
         }
     }
 }

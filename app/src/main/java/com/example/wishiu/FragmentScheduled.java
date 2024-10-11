@@ -62,7 +62,7 @@ public class FragmentScheduled extends Fragment {
             rvsc.setAdapter(produtosAsc);
         } else {
             TextView emptyWishessc = new TextView(getActivity());
-            emptyWishessc.setText("You haven't set arrival dates for any of your achieved wishes. When you do, they will be added to this list.");
+            emptyWishessc.setText("Вы не установили даты ни для одного из ваших достигнутых желаний. Когда вы это сделаете, они будут добавлены в этот список.");
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
             params.setMargins(24, 0, 24, 0);

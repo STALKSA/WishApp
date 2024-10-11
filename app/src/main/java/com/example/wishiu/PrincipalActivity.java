@@ -35,7 +35,7 @@ public class PrincipalActivity extends AppCompatActivity {
         final ImageButton settings = (ImageButton) findViewById(R.id.settings);
         final PopupMenu opcoes = new PopupMenu(this, settings);
         final Menu menu = opcoes.getMenu();
-        menu.add(0, 0, 0, "Settings");
+        menu.add(0, 0, 0, "Настройки");
         opcoes.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {

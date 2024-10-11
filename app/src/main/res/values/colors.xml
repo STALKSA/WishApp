@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#FE6868</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="white">#FFFFFF</color>
-    <color name="textoLaranja">#FE815B</color>
-    <color name="textoCinza">#707070</color>
+    <color name="colorPrimary">#0D0D0D</color> <!-- Тёмно-чёрный -->
+    <color name="colorPrimaryDark">#800080</color> <!-- Фиолетовый -->
+    <color name="colorAccent">#FF1493</color> <!-- Ярко-розовый (неоновый) -->
+    <color name="white">#FFFFFF</color> <!-- Белый, для контраста -->
+    <color name="textoLaranja">#FF00FF</color> <!-- Неоновый фуксия -->
+    <color name="textoCinza">#A9A9A9</color> <!-- Тёмно-серый для текста -->
 </resources>
+
+
+
+
+
+

@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace "com.example.wishiu"
     compileSdkVersion 34
+
     defaultConfig {
         applicationId "com.example.wishiu"
         minSdkVersion 16

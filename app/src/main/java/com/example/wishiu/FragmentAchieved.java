@@ -60,7 +60,7 @@ public class FragmentAchieved extends Fragment {
             rva.setAdapter(produtosAa);
         } else {
             TextView emptyWishesa = new TextView(getActivity());
-            emptyWishesa.setText("You haven't achieved any wishes yet. When you do, they will be added to this list.");
+            emptyWishesa.setText("Пока что ни одно из ваших желаний не осуществилось. Когда вы это сделаете, они будут добавлены в этот список.");
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
             params.setMargins(24, 0, 24, 0);

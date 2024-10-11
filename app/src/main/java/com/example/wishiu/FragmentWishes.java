@@ -53,7 +53,7 @@ public class FragmentWishes extends Fragment {
             rv.setAdapter(produtosA);
         } else {
             TextView emptyWishes = new TextView(getActivity());
-            emptyWishes.setText("You have no Wishes yet. Click the + button to add to this list.");
+            emptyWishes.setText("У вас пока нет желаний. Нажмите кнопку +, чтобы добавить в этот список.");
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
             params.setMargins(24,0,24,0);
